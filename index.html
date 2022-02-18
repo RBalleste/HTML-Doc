@@ -243,21 +243,55 @@
         <video class="center" controls autoplay loops height=200px midth=100px>
         <source src="Videos/samplevideo_1280x720_1mb.mp4" > Element de video no soportat al seu navegador
         </video> <br>
-        <p>Exemple de barra de progrés simple:</p><br>
-        <progress min="0" max="100" value="50"></progress> <br>
+        <p>Exemple de una barra de progrès mes ven feta amb css i js : </p> <br>
+          <style>
+            #myProgress {
+              width: 100%;
+              background-color: #ddd;
+            }
+            
+            #myBar {
+              width: 1%;
+              height: 30px;
+              background-color: #04AA6D;
+            }
+          </style>
+          <h3>JavaScript Progress Bar</h3>
+          <div id="myProgress">
+            <div id="myBar"></div>
+          </div>
+          <br>
+          <button onclick="move()">Click Me</button> 
+          <script>
+          var i = 0;
+          function move() {
+            if (i == 0) {
+              i = 1;
+              var elem = document.getElementById("myBar");
+              var width = 1;
+              var id = setInterval(frame, 10);
+              function frame() {
+                if (width >= 100) {
+                  clearInterval(id);
+                  i = 0;
+                } else {
+                  width++;
+                  elem.style.width = width + "%";
+                }
+              }
+            }
+          }
+          </script>
     </section>
-//prova es pot borrar
 
-<br>
+    <hr/>
+    <h3 align=center> <u> <a name="Form">Formularis en html</a></u></h3>	
 
-<hr/>
-<h3 align=center> <u> <a name="Form">Formularis en html</a></u></h3>	
+    <p> Esta explicat aqui:</p>
 
-<p> Esta explicat aqui:</p>
-
-<a href="https://developer.mozilla.org/es/docs/Learn/Forms/Your_first_form"> Formularis amb html</a>
-<br> 
-  <script src="scripts/main.js"></script> <br>
-  <hr/>
-</body>
-</html>
+    <a href="https://developer.mozilla.org/es/docs/Learn/Forms/Your_first_form"> Formularis amb html</a>
+    <br> 
+      <script src="scripts/main.js"></script> <br>
+      <hr/>
+    </body>
+    </html>
